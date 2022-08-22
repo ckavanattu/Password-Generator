@@ -87,3 +87,46 @@ var passwordDetails = function() {
   }
   
   }
+
+  var generatePassword = function(PL,UC, LC, SC, Num) {
+    // console.log(upperCaseCharCode)
+    // console.log(lowerCaseCharCode)
+    // console.log(specialCharCode)
+    // console.log(numberCharCode)
+    var charCodes = []
+    if(UC===1) {
+        charCodes= charCodes.concat(upperCaseCharCode)
+    }
+    
+    if(LC===1){
+        charCodes = charCodes.concat(lowerCaseCharCode)
+    }
+    if(SC===1){
+        charCodes = charCodes.concat(specialCharCode)
+    }
+    if(Num===1){
+        charCodes = charCodes.concat(numberCharCode)
+    }
+
+    console.log(charCodes) 
+
+    var passwordCharacter= []
+    
+    for(i=0; i<PL; i++){
+        var characterCode= charCodes[Math.floor(Math.random()* charCodes.length)]
+
+        passwordCharacter.push(String.fromCharCode(characterCode))
+    }
+    console.log(passwordCharacter)
+    var password= passwordCharacter.join("")
+    passwordText.value=password
+
+
+}
+
+
+
+
+
+
+passwordBtn.addEventListener("click", passwordDetails);
