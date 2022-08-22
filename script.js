@@ -1,3 +1,19 @@
+var passwordBtn = document.querySelector("#generate")
+var passwordText= document.querySelector("#password")
+var upperCaseCharCode = generateCharCodes(65, 90)
+var lowerCaseCharCode = generateCharCodes(97, 122)
+var numberCharCode = generateCharCodes(48, 57)
+var specialCharCode = generateCharCodes(33, 47)
+
+function generateCharCodes(low, high) {
+    var array = [ ]
+
+    for (i=low; i<=high; i++) {
+        array.push(i)
+    }
+    return array
+
+}
 
 
 
