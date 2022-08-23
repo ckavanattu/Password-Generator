@@ -4,7 +4,8 @@
 * Added prompts to confirm password details from User
 * CharCodes to generate the password
 * Added Verification to ensure password meets minimum requirements for character Length
-* Link to Deployed Application Below
+
+## Link to Deployed Application Below
 
 https://ckavanattu.github.io/Password-Generator/
 
